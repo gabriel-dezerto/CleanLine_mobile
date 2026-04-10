@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/rotasFragment">
+
+    <fragment
+        android:id="@+id/rotasFragment"
+        android:name="com.example.cleanline.RotasFragment"
+        android:label="Rotas"/>
+
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.cleanline.PerfilFragment"
+        android:label="Perfil"/>
+
+</navigation>
