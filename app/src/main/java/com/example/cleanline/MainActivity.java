@@ -37,26 +37,26 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = etEmail.getText().toString().trim();
-                String senha = etSenha.getText().toString().trim();
-
-                tilEmail.setError(null);
-                tilSenha.setError(null);
-
-                if(email.isEmpty()){
-                    tilEmail.setError("Informe o email");
-                    return;
-                }
-
-                if(!email.contains("@")){
-                    tilEmail.setError("Email inválido");
-                    return;
-                }
-
-                if(senha.isEmpty()){
-                    tilSenha.setError("Informe a senha");
-                    return;
-                }
+//                String email = etEmail.getText().toString().trim();
+//                String senha = etSenha.getText().toString().trim();
+//
+//                tilEmail.setError(null);
+//                tilSenha.setError(null);
+//
+//                if(email.isEmpty()){
+//                    tilEmail.setError("Informe o email");
+//                    return;
+//                }
+//
+//                if(!email.contains("@")){
+//                    tilEmail.setError("Email inválido");
+//                    return;
+//                }
+//
+//                if(senha.isEmpty()){
+//                    tilSenha.setError("Informe a senha");
+//                    return;
+//                }
 
                 Intent intent = new Intent(MainActivity.this, HomeActivity.class);
 
