@@ -43,12 +43,12 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="76dp"
 
         android:background="@android:color/white"
         android:elevation="0dp"
 
-        app:itemIconSize="36dp"
+        app:itemIconSize="40dp"
         app:itemIconTint="@color/nav_colors"
         app:itemTextColor="@color/nav_colors"
         app:itemBackground="@drawable/nav_item_background"
