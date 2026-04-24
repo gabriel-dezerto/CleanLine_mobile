@@ -1,5 +1,6 @@
 package com.example.cleanline;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,11 +46,22 @@ public class RotasAdapter extends RecyclerView.Adapter<RotasAdapter.RotasViewHol
     public class RotasViewHolder extends RecyclerView.ViewHolder{
         TextView txtSetor;
 
-
         public RotasViewHolder(@NonNull View itemView) {
             super(itemView);
 
             txtSetor = itemView.findViewById(R.id.txtSetor);
+
+            itemView.setOnClickListener(v -> {
+                int position = getAdapterPosition();
+
+                if(position != RecyclerView.NO_POSITION){
+                    Rotas rota = listaRotas.get(position);
+
+                    Intent intent = new Intent(v.getContext(), NfcActivity.class);
+
+                    v.getContext().startActivity(intent);
+                }
+            });
         }
     }
 }
