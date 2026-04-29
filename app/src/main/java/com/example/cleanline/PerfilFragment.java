@@ -11,6 +11,6 @@ import android.view.ViewGroup;
 public class PerfilFragment extends Fragment {
 
     public PerfilFragment() {
-
+        super(R.layout.fragment_perfil);
     }
 }
