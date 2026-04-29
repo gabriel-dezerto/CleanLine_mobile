@@ -4,20 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_item_rota"
-    android:layout_margin="8dp">
+    android:layout_margin="8dp"
+    android:gravity="center_vertical">
 
     <TextView
         android:id="@+id/txtSetor"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="Setor"
-        android:textSize="18dp"
+        android:textSize="22sp"
         />
 
     <ImageView
         android:id="@+id/imgNFC"
-        android:layout_width="24dp"
-        android:layout_height="24dp" />
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_rota_nfc"/>
 
 
 </LinearLayout>
