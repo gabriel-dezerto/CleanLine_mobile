@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CleanLine">
         <activity
+            android:name=".FormsActivity"
+            android:exported="false" />
+        <activity
             android:name=".NfcActivity"
             android:exported="false" />
         <activity
