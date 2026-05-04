@@ -10,36 +10,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:background="@color/azul_escuro"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-
-            <ImageView
-                android:layout_width="230dp"
-                android:layout_height="58dp"
-                android:src="@drawable/logo_home"
-                android:scaleType="fitStart"
-                android:adjustViewBounds="true"
-                android:layout_gravity="start"
-                android:paddingStart="6dp"/>
-
-        </androidx.appcompat.widget.Toolbar>
-
+        <!-- TOPO AZUL -->
         <LinearLayout
             android:id="@+id/layoutAzul"
             android:layout_width="0dp"
             android:layout_height="310dp"
             android:orientation="vertical"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@id/toolbar"
             android:background="@color/azul_escuro"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <ImageView
                 android:id="@+id/imgFotoFuncionario"
@@ -56,16 +38,19 @@
                 android:textSize="22sp"/>
         </LinearLayout>
 
+        <!-- PARTE BRANCA -->
         <LinearLayout
             android:id="@+id/layoutBranco"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp"
+            android:padding="15dp"
             android:background="@android:color/white"
+
             app:layout_constraintTop_toBottomOf="@id/layoutAzul"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <!-- LINHA 1 -->
             <LinearLayout
@@ -86,7 +71,7 @@
                         android:textStyle="bold"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="supervisor@cleanline.com.br"/>
                 </LinearLayout>
@@ -98,7 +83,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="CPF"
                         android:textStyle="bold"/>
@@ -118,7 +103,7 @@
                 android:layout_marginTop="12dp">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Telefone"
                     android:textStyle="bold"/>
@@ -143,10 +128,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:text="Cidade" android:textStyle="bold"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        />
+                        android:text="Cidade"
+                        android:textStyle="bold"/>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -157,14 +143,15 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Estado"
                         android:textStyle="bold"/>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -178,10 +165,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Bairro"
                         android:textStyle="bold"/>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -203,10 +191,11 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Logradouro"
                         android:textStyle="bold"/>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -218,11 +207,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
+
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="N°"
                         android:textStyle="bold"/>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
