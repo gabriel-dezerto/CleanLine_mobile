@@ -14,11 +14,10 @@
         <LinearLayout
             android:id="@+id/layoutAzul"
             android:layout_width="0dp"
-            android:layout_height="310dp"
+            android:layout_height="300dp"
             android:orientation="vertical"
             android:gravity="center"
             android:background="@color/azul_escuro"
-
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
