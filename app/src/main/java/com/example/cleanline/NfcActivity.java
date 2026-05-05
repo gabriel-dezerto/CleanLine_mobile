@@ -26,19 +26,6 @@ public class NfcActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Configurações para aparecer o vídeo
-        VideoView videoView = findViewById(R.id.video_nfc);
-
-        Uri uri = Uri.parse("android.resource//" + getPackageName() + "/" + R.raw.video_nfc);
-        videoView.setVideoURI(uri);
-
-        videoView.setOnPreparedListener(mp -> {
-            mp.setLooping(true);       // Looping infinito
-            mp.setVolume(0f, 0f);     // Sem som
-        });
-
-        videoView.start();
-
         btnCancelar = findViewById(R.id.btnCancelar);
 
         btnCancelar.setOnClickListener(v -> {
