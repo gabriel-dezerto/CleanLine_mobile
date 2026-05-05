@@ -40,7 +40,176 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- Pergunta 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_bloco_pergunta"
+                android:padding="16dp"
+                android:layout_margin="10dp">
 
+                <TextView
+                    android:id="@+id/txtPergunta1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+                
+                <RadioGroup
+                    android:id="@+id/rgPergunta1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rbP1Exc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Excelente"/>
+
+                    <RadioButton
+                        android:id="@+id/rbP1Bom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bom"/>
+
+                    <RadioButton
+                        android:id="@+id/rbP1Ok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ok"/>
+
+                    <RadioButton
+                        android:id="@+id/rbP1Ruim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ruim"/>
+
+                    <RadioButton
+                        android:id="@+id/rbP1Pes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Péssimo"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- Pergunta 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_bloco_pergunta"
+                android:padding="16dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/txtPergunta2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgPergunta2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rbP2Exc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Excelente"/>
+
+                    <RadioButton
+                        android:id="@+id/rbP2Bom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bom"/>
+
+                    <RadioButton
+                        android:id="@+id/rbP2Ok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ok"/>
+
+                    <RadioButton
+                        android:id="@+id/rbP2Ruim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ruim"/>
+
+                    <RadioButton
+                        android:id="@+id/rbP2Pes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Péssimo"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- Pergunta 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_bloco_pergunta"
+                android:padding="16dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/txtPergunta3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgPergunta3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rbP3Exc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Excelente"/>
+
+                    <RadioButton
+                        android:id="@+id/rbP3Bom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bom"/>
+
+                    <RadioButton
+                        android:id="@+id/rbP3Ok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ok"/>
+
+                    <RadioButton
+                        android:id="@+id/rbP3Ruim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ruim"/>
+
+                    <RadioButton
+                        android:id="@+id/rbP3Pes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Péssimo"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
 
         </LinearLayout>
 
