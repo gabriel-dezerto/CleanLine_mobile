@@ -54,7 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text=""
+                    android:text="Materiais, ferramentas e objetos estão em seus devidos lugares, sem obstruções ou itens desnecessários espalhados?"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -111,7 +111,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text=""
+                    android:text="Pisos, bancadas, mesas e equipamentos estão livres de poeira, manchas ou resíduos visíveis?"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -168,7 +168,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text=""
+                    android:text="As lixeiras estão adequadas, corretamente separadas e sem acúmulo excessivo de lixo?
+"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -225,7 +226,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text=""
+                    android:text="Etiquetas de localização, quadros informativos e sinalizações internas estão limpos, legíveis e atualizados?"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -282,7 +283,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text=""
+                    android:text="Máquinas, computadores e ferramentas estão limpos e em bom estado de funcionamento?"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -339,7 +340,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text=""
+                    android:text="Cantos, atrás de móveis e partes altas estão livres de poeira, teias ou sujeira acumulada?"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -396,7 +397,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text=""
+                    android:text="O ambiente está livre de odores desagradáveis, mofo ou sinais de insetos e roedores?"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -453,7 +454,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text=""
+                    android:text="O setor segue corretamente as rotinas de limpeza e manutenção estabelecidas pela empresa?"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
