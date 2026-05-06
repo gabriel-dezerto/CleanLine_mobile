@@ -49,6 +49,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/icon_nfc"/>
 
+    <com.google.android.material.loadingindicator.LoadingIndicator
+        android:id="@+id/loadInd"
+        style="@style/Widget.Material3.LoadingIndicator.Contained"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:indicatorColor="@color/azul_escuro"
+        app:containerColor="@color/azul_claro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtEscanear"/>
+
     <Button
         android:id="@+id/btnCancelar"
         android:layout_width="wrap_content"
@@ -61,6 +72,7 @@
         android:layout_marginBottom="80dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loadInd"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
