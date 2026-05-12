@@ -169,8 +169,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
-                    android:text="As lixeiras estão adequadas, corretamente separadas e sem acúmulo excessivo de lixo?
-"
+                    android:text="As lixeiras estão adequadas, corretamente separadas e sem acúmulo excessivo de lixo?"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
