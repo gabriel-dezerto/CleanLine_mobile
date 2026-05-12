@@ -68,30 +68,35 @@
                         android:id="@+id/rbP1Exc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Excelente" />
 
                     <RadioButton
                         android:id="@+id/rbP1Bom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Bom" />
 
                     <RadioButton
                         android:id="@+id/rbP1Ok"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ok" />
 
                     <RadioButton
                         android:id="@+id/rbP1Ruim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ruim" />
 
                     <RadioButton
                         android:id="@+id/rbP1Pes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Péssimo" />
 
                 </RadioGroup>
@@ -125,30 +130,35 @@
                         android:id="@+id/rbP2Exc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Excelente" />
 
                     <RadioButton
                         android:id="@+id/rbP2Bom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Bom" />
 
                     <RadioButton
                         android:id="@+id/rbP2Ok"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ok" />
 
                     <RadioButton
                         android:id="@+id/rbP2Ruim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ruim" />
 
                     <RadioButton
                         android:id="@+id/rbP2Pes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Péssimo" />
 
                 </RadioGroup>
@@ -182,30 +192,35 @@
                         android:id="@+id/rbP3Exc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Excelente" />
 
                     <RadioButton
                         android:id="@+id/rbP3Bom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Bom" />
 
                     <RadioButton
                         android:id="@+id/rbP3Ok"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ok" />
 
                     <RadioButton
                         android:id="@+id/rbP3Ruim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ruim" />
 
                     <RadioButton
                         android:id="@+id/rbP3Pes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Péssimo" />
 
                 </RadioGroup>
@@ -239,30 +254,35 @@
                         android:id="@+id/rbP4Exc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Excelente" />
 
                     <RadioButton
                         android:id="@+id/rbP4Bom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Bom" />
 
                     <RadioButton
                         android:id="@+id/rbP4Ok"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ok" />
 
                     <RadioButton
                         android:id="@+id/rbP4Ruim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ruim" />
 
                     <RadioButton
                         android:id="@+id/rbP4Pes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Péssimo" />
 
                 </RadioGroup>
@@ -296,30 +316,35 @@
                         android:id="@+id/rbP5Exc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Excelente" />
 
                     <RadioButton
                         android:id="@+id/rbP5Bom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Bom" />
 
                     <RadioButton
                         android:id="@+id/rbP5Ok"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ok" />
 
                     <RadioButton
                         android:id="@+id/rbP5Ruim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ruim" />
 
                     <RadioButton
                         android:id="@+id/rbP5Pes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Péssimo" />
 
                 </RadioGroup>
@@ -353,30 +378,35 @@
                         android:id="@+id/rbP6Exc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Excelente" />
 
                     <RadioButton
                         android:id="@+id/rbP6Bom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Bom" />
 
                     <RadioButton
                         android:id="@+id/rbP6Ok"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ok" />
 
                     <RadioButton
                         android:id="@+id/rbP6Ruim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ruim" />
 
                     <RadioButton
                         android:id="@+id/rbP6Pes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Péssimo" />
 
                 </RadioGroup>
@@ -410,30 +440,35 @@
                         android:id="@+id/rbP7Exc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Excelente" />
 
                     <RadioButton
                         android:id="@+id/rbP7Bom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Bom" />
 
                     <RadioButton
                         android:id="@+id/rbP7Ok"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ok" />
 
                     <RadioButton
                         android:id="@+id/rbP7Ruim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ruim" />
 
                     <RadioButton
                         android:id="@+id/rbP7Pes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Péssimo" />
 
                 </RadioGroup>
@@ -467,30 +502,35 @@
                         android:id="@+id/rbP8Exc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Excelente" />
 
                     <RadioButton
                         android:id="@+id/rbP8Bom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Bom" />
 
                     <RadioButton
                         android:id="@+id/rbP8Ok"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ok" />
 
                     <RadioButton
                         android:id="@+id/rbP8Ruim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Ruim" />
 
                     <RadioButton
                         android:id="@+id/rbP8Pes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:buttonTint="@color/radio_selector"
                         android:text="Péssimo" />
 
                 </RadioGroup>
