@@ -14,6 +14,7 @@
         android:layout_weight="1"
         android:text="Setor"
         android:textSize="22sp"
+        android:fontFamily="@font/roboto_regular"
         />
 
     <ImageView

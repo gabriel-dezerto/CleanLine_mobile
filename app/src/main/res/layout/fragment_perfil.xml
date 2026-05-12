@@ -34,6 +34,7 @@
                 android:text="Nome Completo"
                 android:textColor="@color/white"
                 android:textStyle="bold"
+                android:fontFamily="@font/roboto_bold"
                 android:textSize="22sp"/>
         </LinearLayout>
 
@@ -63,12 +64,13 @@
                     android:text="Email"
                     android:textSize="18sp"
                     android:textColor="#000000"
-                    android:textStyle="bold"/>
+                    android:fontFamily="@font/roboto_bold"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="supervisor@cleanline.com.br"/>
             </LinearLayout>
 
@@ -91,12 +93,13 @@
                         android:textSize="18sp"
                         android:text="Telefone"
                         android:textColor="#000000"
-                        android:textStyle="bold"/>
+                        android:fontFamily="@font/roboto_bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="(11) 91234-5678"/>
                 </LinearLayout>
 
@@ -112,12 +115,13 @@
                         android:text="CPF"
                         android:textSize="18sp"
                         android:textColor="#000000"
-                        android:textStyle="bold"/>
+                        android:fontFamily="@font/roboto_bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="123.456.789-00"/>
                 </LinearLayout>
             </LinearLayout>
@@ -141,12 +145,13 @@
                         android:text="Cidade"
                         android:textSize="18sp"
                         android:textColor="#000000"
-                        android:textStyle="bold"/>
+                        android:fontFamily="@font/roboto_bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="São Caetano do Sul"/>
                 </LinearLayout>
 
@@ -163,12 +168,13 @@
                         android:text="Estado"
                         android:textSize="18sp"
                         android:textColor="#000000"
-                        android:textStyle="bold"/>
+                        android:fontFamily="@font/roboto_bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="SP"/>
                 </LinearLayout>
 
@@ -184,12 +190,13 @@
                         android:text="Bairro"
                         android:textSize="18sp"
                         android:textColor="#000000"
-                        android:textStyle="bold"/>
+                        android:fontFamily="@font/roboto_bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="Boa Vista"/>
                 </LinearLayout>
             </LinearLayout>
@@ -213,12 +220,13 @@
                         android:text="Logradouro"
                         android:textSize="16sp"
                         android:textColor="#000000"
-                        android:textStyle="bold"/>
+                        android:fontFamily="@font/roboto_bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="Rua Santo André"/>
                 </LinearLayout>
 
@@ -234,12 +242,13 @@
                         android:text="N°"
                         android:textSize="16sp"
                         android:textColor="#000000"
-                        android:textStyle="bold"/>
+                        android:fontFamily="@font/roboto_bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
+                        android:fontFamily="@font/roboto_regular"
                         android:text="608"/>
                 </LinearLayout>
             </LinearLayout>
