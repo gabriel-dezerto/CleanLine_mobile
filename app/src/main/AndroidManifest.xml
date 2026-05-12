@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.NFC"/>
-    <uses-feature android:name="android.hardware.nfc" android:required="true"/>
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature android:name="android.hardware.nfc" android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -16,14 +16,20 @@
         android:theme="@style/Theme.CleanLine">
         <activity
             android:name=".FormsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".NfcActivity"
             android:exported="false" >
             <intent-filter>
-                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="text/plain"/>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+<!--                <data android:mimeType="text/plain" />-->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NfcActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+<!--                <data android:mimeType="text/plain" />-->
             </intent-filter>
         </activity>
         <activity
