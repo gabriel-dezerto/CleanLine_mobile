@@ -41,9 +41,9 @@
         <LinearLayout
             android:id="@+id/layoutBranco"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:orientation="vertical"
-            android:padding="15dp"
+            android:padding="20dp"
             android:background="@android:color/white"
 
             app:layout_constraintTop_toBottomOf="@id/layoutAzul"
@@ -55,7 +55,29 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="supervisor@cleanline.com.br"/>
+            </LinearLayout>
+
+            <!-- LINHA 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -66,13 +88,16 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Email"
+                        android:textSize="18sp"
+                        android:text="Telefone"
+                        android:textColor="#000000"
                         android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="supervisor@cleanline.com.br"/>
+                        android:textSize="20sp"
+                        android:text="(11) 91234-5678"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -85,32 +110,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="CPF"
+                        android:textSize="18sp"
+                        android:textColor="#000000"
                         android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="20sp"
                         android:text="123.456.789-00"/>
                 </LinearLayout>
-            </LinearLayout>
-
-            <!-- LINHA 2 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="12dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Telefone"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="(00) 1234-56789"/>
             </LinearLayout>
 
             <!-- LINHA 3 -->
@@ -130,11 +139,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cidade"
+                        android:textSize="18sp"
+                        android:textColor="#000000"
                         android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="20sp"
                         android:text="São Caetano do Sul"/>
                 </LinearLayout>
 
@@ -149,11 +161,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Estado"
+                        android:textSize="18sp"
+                        android:textColor="#000000"
                         android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="20sp"
                         android:text="SP"/>
                 </LinearLayout>
 
@@ -167,11 +182,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Bairro"
+                        android:textSize="18sp"
+                        android:textColor="#000000"
                         android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="20sp"
                         android:text="Boa Vista"/>
                 </LinearLayout>
             </LinearLayout>
@@ -193,11 +211,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Logradouro"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
                         android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="18sp"
                         android:text="Rua Santo André"/>
                 </LinearLayout>
 
@@ -211,11 +232,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="N°"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
                         android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="18sp"
                         android:text="608"/>
                 </LinearLayout>
             </LinearLayout>
