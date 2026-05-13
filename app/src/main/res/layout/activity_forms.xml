@@ -537,6 +537,7 @@
 
             </LinearLayout>
 
+            <!-- Nota do setor -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -564,7 +565,44 @@
 
             </LinearLayout>
 
+            <!-- Botão de tirar foto -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_bloco_pergunta"
+                android:orientation="vertical"
+                android:padding="16dp">
 
+                <Button
+                    android:id="@+id/btnTirarFoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tirar Foto da Vistoria"
+                    android:backgroundTint="@color/azul_claro"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/tvStatusFoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Nenhuma foto capturada"
+                    android:textColor="@android:color/darker_gray"/>
+
+            </LinearLayout>
+
+            <!-- Botão de enviar Forms -->
+            <Button
+                android:id="@+id/btnEnviarForm"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="20dp"
+                android:text="ENVIAR VISTORIA"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/azul_escuro"
+                android:textColor="@color/white"/>
 
         </LinearLayout>
 
