@@ -23,7 +23,7 @@ public interface ApiService {
 
     @Multipart
     @POST("vistoria")
-    Call<ResponseBody> dadosVistoria(
+    Call<ResponseBody> enviarVistoria(
             @Part("id_super") RequestBody idSuper,
             @Part("id_setor") RequestBody idSetor,
             @Part("pontuacao") RequestBody pontuacao,
