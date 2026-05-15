@@ -3,10 +3,10 @@ package com.example.cleanline.service;
 import com.google.gson.annotations.SerializedName;
 
 public class LoginRequest {
-    @SerializedName("Email")
+    @SerializedName("email")
     private String email;
 
-    @SerializedName("Senha")
+    @SerializedName("senha")
     private String senha;
 
     public LoginRequest(String email, String senha) {

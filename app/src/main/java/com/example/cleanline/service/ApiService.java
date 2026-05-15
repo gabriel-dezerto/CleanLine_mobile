@@ -18,7 +18,7 @@ import retrofit2.http.Part;
 
 public interface ApiService {
 
-    @POST("login")
+    @POST("api/login")
     Call<Supervisor> login(@Body LoginRequest loginRequest);
 
     @Multipart
