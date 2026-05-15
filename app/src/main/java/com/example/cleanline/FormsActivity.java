@@ -43,6 +43,7 @@ public class FormsActivity extends AppCompatActivity {
     private Button btnFoto, btnEnviar;
     private TextView tvStatusFoto;
     private EditText etNota;
+    private TextView tvNomeSetorForm;
 
     private int idSetorSelecionado = -1;
 
@@ -70,12 +71,13 @@ public class FormsActivity extends AppCompatActivity {
             return insets;
         });
 
+        tvNomeSetorForm = findViewById(R.id.tvNomeSetorForm);
+
         idSetorSelecionado = getIntent().getIntExtra("ID_SETOR", -1);
         String nomeSetor = getIntent().getStringExtra("NOME_SETOR");
 
-        if (getSupportActionBar() != null && nomeSetor != null){
-            getSupportActionBar().setDisplayShowTitleEnabled(true);
-            getSupportActionBar().setTitle("Vistoria: " + nomeSetor);
+        if (nomeSetor != null && tvNomeSetorForm != null){
+            tvNomeSetorForm.setText("Setor: " + nomeSetor);
         }
 
         btnFoto = findViewById(R.id.btnTirarFoto);

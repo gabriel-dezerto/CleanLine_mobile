@@ -15,14 +15,18 @@ import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
+import retrofit2.http.Path;
 
 public interface ApiService {
 
     @POST("api/login")
     Call<Supervisor> login(@Body LoginRequest loginRequest);
 
+    @GET("api/supervisor/{id}")
+    Call<Supervisor> obterPerfil(@Path("id") int idSupervisor);
+
     @Multipart
-    @POST("vistoria")
+    @POST("api/vistoria")
     Call<ResponseBody> enviarVistoria(
             @Part("id_super") RequestBody idSuper,
             @Part("id_setor") RequestBody idSetor,

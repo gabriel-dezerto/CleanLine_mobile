@@ -29,9 +29,10 @@
                 android:src="@drawable/ic_perfil" />
 
             <TextView
+                android:id="@+id/tvPerfilNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nome Completo"
+                android:text="Carregando..."
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:fontFamily="@font/roboto_bold"
@@ -67,11 +68,12 @@
                     android:fontFamily="@font/roboto_bold"/>
 
                 <TextView
+                    android:id="@+id/tvPerfilEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:fontFamily="@font/roboto_regular"
-                    android:text="supervisor@cleanline.com.br"/>
+                    android:text="Carregando..."/>
             </LinearLayout>
 
             <!-- LINHA 2 -->
@@ -96,11 +98,12 @@
                         android:fontFamily="@font/roboto_bold"/>
 
                     <TextView
+                        android:id="@+id/tvPerfilTelefone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
                         android:fontFamily="@font/roboto_regular"
-                        android:text="(11) 91234-5678"/>
+                        android:text="Carregando..."/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -118,11 +121,12 @@
                         android:fontFamily="@font/roboto_bold"/>
 
                     <TextView
+                        android:id="@+id/tvPerfilCPF"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
                         android:fontFamily="@font/roboto_regular"
-                        android:text="123.456.789-00"/>
+                        android:text="..."/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -148,11 +152,12 @@
                         android:fontFamily="@font/roboto_bold"/>
 
                     <TextView
+                        android:id="@+id/tvPerfilCidade"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
                         android:fontFamily="@font/roboto_regular"
-                        android:text="São Caetano do Sul"/>
+                        android:text="..."/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -171,11 +176,12 @@
                         android:fontFamily="@font/roboto_bold"/>
 
                     <TextView
+                        android:id="@+id/tvPerfilEstado"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
                         android:fontFamily="@font/roboto_regular"
-                        android:text="SP"/>
+                        android:text="..."/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -193,11 +199,12 @@
                         android:fontFamily="@font/roboto_bold"/>
 
                     <TextView
+                        android:id="@+id/tvPerfilBairro"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
                         android:fontFamily="@font/roboto_regular"
-                        android:text="Boa Vista"/>
+                        android:text="..."/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -223,11 +230,12 @@
                         android:fontFamily="@font/roboto_bold"/>
 
                     <TextView
+                        android:id="@+id/tvPerfilLogradouro"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
                         android:fontFamily="@font/roboto_regular"
-                        android:text="Rua Santo André"/>
+                        android:text="..."/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -245,11 +253,12 @@
                         android:fontFamily="@font/roboto_bold"/>
 
                     <TextView
+                        android:id="@+id/tvPerfilNumero"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
                         android:fontFamily="@font/roboto_regular"
-                        android:text="608"/>
+                        android:text="..."/>
                 </LinearLayout>
             </LinearLayout>
 
