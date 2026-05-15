@@ -44,6 +44,8 @@ public class FormsActivity extends AppCompatActivity {
     private TextView tvStatusFoto;
     private EditText etNota;
 
+    private int idSetorSelecionado = -1;
+
     // Array para facilitar busca dos RadioGroups
     private RadioGroup[] rgs = new RadioGroup[8];
 
@@ -67,6 +69,14 @@ public class FormsActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        idSetorSelecionado = getIntent().getIntExtra("ID_SETOR", -1);
+        String nomeSetor = getIntent().getStringExtra("NOME_SETOR");
+
+        if (getSupportActionBar() != null && nomeSetor != null){
+            getSupportActionBar().setDisplayShowTitleEnabled(true);
+            getSupportActionBar().setTitle("Vistoria: " + nomeSetor);
+        }
 
         btnFoto = findViewById(R.id.btnTirarFoto);
         btnEnviar = findViewById(R.id.btnEnviarForm);
@@ -121,7 +131,7 @@ public class FormsActivity extends AppCompatActivity {
 
         // Preparar dados multipart
         RequestBody rbIdSuper = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(idSuper));
-        RequestBody rbIdSetor = RequestBody.create(MediaType.parse("text/plain"), "1");
+        RequestBody rbIdSetor = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(idSetorSelecionado));
         RequestBody rbPontuacao = RequestBody.create(MediaType.parse("text/plain"), notaStr);
 
         // Capturar texto dos RadioButtons selecionados

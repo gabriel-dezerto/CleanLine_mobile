@@ -24,6 +24,9 @@ public class NfcActivity extends AppCompatActivity {
 
     private NfcAdapter nfcAdapter;
     private PendingIntent pendingIntent;
+    private String nfcEsperado;
+    private int idSetor;
+    private String nomeSetor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,10 @@ public class NfcActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        nfcEsperado = getIntent().getStringExtra("NFC_ESPERADO");
+        idSetor = getIntent().getIntExtra("ID_SETOR", -1);
+        nomeSetor = getIntent().getStringExtra("NOME_SETOR");
 
         btnCancelar = findViewById(R.id.btnCancelar);
 
@@ -61,9 +68,6 @@ public class NfcActivity extends AppCompatActivity {
 
         // Ativa o modo de prioridade
         if (nfcAdapter != null){
-            IntentFilter tagDetected = new IntentFilter(NfcAdapter.ACTION_TAG_DISCOVERED);
-            IntentFilter[] filters = new IntentFilter[]{tagDetected};
-
             nfcAdapter.enableForegroundDispatch(this, pendingIntent, null, null);
         }
     }
@@ -83,10 +87,31 @@ public class NfcActivity extends AppCompatActivity {
         super.onNewIntent(intent);
 
         if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction()) || NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())){
+            byte[] tagIdBytes = intent.getByteArrayExtra(NfcAdapter.EXTRA_ID);
 
-            // Verifica se a intenção que chegou é um NFC lido
-            Intent mudarTela = new Intent(this, FormsActivity.class);
-            startActivity(mudarTela);
+            String tagLidaDecimal = convertBytesToDecimal(tagIdBytes);
+
+            if (tagLidaDecimal != null && tagLidaDecimal.equals(nfcEsperado)){
+                Toast.makeText(this, "Acesso autorizado ao setor: " + nomeSetor, Toast.LENGTH_SHORT).show();
+
+                Intent mudarTela = new Intent(this, FormsActivity.class);
+                mudarTela.putExtra("ID_SETOR", idSetor);
+                mudarTela.putExtra("NOME_SETOR", nomeSetor);
+                startActivity(mudarTela);
+                finish();
+            }
+            else {
+                Toast.makeText(this, "Tag inválida! Este NFC não pertence ao setor " + nomeSetor, Toast.LENGTH_LONG).show();
+            }
         }
+    }
+
+    private String convertBytesToDecimal(byte[] bytes){
+        if (bytes == null) return null;
+        long result = 0;
+        for (int i = bytes.length - 1; i >= 0; i--){
+            result = (result << 8) + (bytes[i] & 0xFF);
+        }
+        return String.valueOf(result);
     }
 }

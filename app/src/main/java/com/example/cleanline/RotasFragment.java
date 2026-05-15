@@ -35,9 +35,11 @@ public class RotasFragment extends Fragment {
 
         listaRotas = new ArrayList<>();
 
-        listaRotas.add(new Rotas("RH"));
-        listaRotas.add(new Rotas("Produção A"));
-        listaRotas.add(new Rotas("Marketing"));
+        listaRotas.add(new Rotas("Venda", "1666738673", 1));
+        listaRotas.add(new Rotas("TI", "1675784673", 2));
+        listaRotas.add(new Rotas("RH", "1395870976", 3));
+        listaRotas.add(new Rotas("Financeiro", "1661122769", 4));
+        listaRotas.add(new Rotas("Administrativo", "1662030545", 5));
 
         rotasAdapter = new RotasAdapter(listaRotas);
 

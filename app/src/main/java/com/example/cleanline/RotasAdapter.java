@@ -1,5 +1,6 @@
 package com.example.cleanline;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,8 +34,17 @@ public class RotasAdapter extends RecyclerView.Adapter<RotasAdapter.RotasViewHol
     @Override
     public void onBindViewHolder(@NonNull RotasAdapter.RotasViewHolder holder, int position) {
         Rotas rotas = listaRotas.get(position);
+        Context context = holder.itemView.getContext();
 
         holder.txtSetor.setText(rotas.getSetor());
+
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, NfcActivity.class);
+            intent.putExtra("NFC_ESPERADO", rotas.getNfcTagEsperada());
+            intent.putExtra("ID_SETOR", rotas.getIdSetor());
+            intent.putExtra("NOME_SETOR", rotas.getSetor());
+            context.startActivity(intent);
+        });
 
     }
 
@@ -50,18 +60,6 @@ public class RotasAdapter extends RecyclerView.Adapter<RotasAdapter.RotasViewHol
             super(itemView);
 
             txtSetor = itemView.findViewById(R.id.txtSetor);
-
-            itemView.setOnClickListener(v -> {
-                int position = getAdapterPosition();
-
-                if(position != RecyclerView.NO_POSITION){
-                    Rotas rota = listaRotas.get(position);
-
-                    Intent intent = new Intent(v.getContext(), NfcActivity.class);
-
-                    v.getContext().startActivity(intent);
-                }
-            });
         }
     }
 }
