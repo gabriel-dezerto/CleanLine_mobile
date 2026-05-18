@@ -574,7 +574,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Digite a nota de 0 a 10"
-                    android:inputType="number"
+                    android:inputType="numberDecimal"
                     android:padding="12dp" />
 
             </LinearLayout>

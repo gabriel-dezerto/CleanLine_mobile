@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -28,7 +29,9 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Locale;
+import java.util.Set;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -39,6 +42,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class FormsActivity extends AppCompatActivity {
+    private static final String TAG = "FormsActivity";
     private String currentPhotoPath;
     private Button btnFoto, btnEnviar;
     private TextView tvStatusFoto;
@@ -127,6 +131,17 @@ public class FormsActivity extends AppCompatActivity {
             return;
         }
 
+        try {
+            double nota = Double.parseDouble(notaStr.replace(",", "."));
+            if (nota < 0 || nota > 10){
+                Toast.makeText(this, "A nota deve ser entre 0 e 10!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+        } catch (NumberFormatException e){
+            Toast.makeText(this, "Nota inválida!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         // Pegar ID do Supervisor logado
         SharedPreferences pref = getSharedPreferences("CLEAN_LINE", Context.MODE_PRIVATE);
         int idSuper = pref.getInt("supervisor_id", -1);
@@ -153,6 +168,9 @@ public class FormsActivity extends AppCompatActivity {
         RequestBody reqImage = RequestBody.create(MediaType.parse("image/jpeg"), file);
         MultipartBody.Part bodyImagem = MultipartBody.Part.createFormData("Image", file.getName(), reqImage);
 
+        btnEnviar.setEnabled(false);
+        btnEnviar.setText("Enviando...");
+
         // Chamada API
         ApiService api = RetroFitClient.getApiService();
         api.enviarVistoria(rbIdSuper, rbIdSetor, rbPontuacao, bodyImagem,
@@ -161,18 +179,58 @@ public class FormsActivity extends AppCompatActivity {
         ).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                btnEnviar.setEnabled(true);
+                btnEnviar.setText("Enviar");
+
                 if (response.isSuccessful()){
+                    SharedPreferences pref = getSharedPreferences("CLEAN_LINE", Context.MODE_PRIVATE);
+                    Set<String> salvos = pref.getStringSet("setores_concluidos", new HashSet<>());
+
+                    Set<String> novosSalvos = new HashSet<>(salvos);
+                    novosSalvos.add(String.valueOf(idSetorSelecionado));
+
+                    pref.edit().putStringSet("setores_concluidos", novosSalvos).apply();
+
                     Toast.makeText(FormsActivity.this, "Vistoria enviada com sucesso!", Toast.LENGTH_LONG).show();
                     finish();
                 }
                 else {
-                    Toast.makeText(FormsActivity.this, "Erro no servidor", Toast.LENGTH_SHORT).show();
+                    String msgErro = "Erro " + response.code();
+                    try {
+                        if (response.errorBody() != null){
+                            String servidorDetalhe = response.errorBody().string();
+                            Log.e(TAG, "Detalhes do erro do servidor: " + servidorDetalhe);
+
+                            if (!servidorDetalhe.trim().isEmpty()){
+                                msgErro += ": " + servidorDetalhe;
+                            }
+                            else {
+                                msgErro += " - Resposta vazia do servidor.";
+                            }
+                        }
+                    } catch (IOException e){
+                        Log.e(TAG, "Erro ao ler o errorBody", e);
+                    }
+                    Toast.makeText(FormsActivity.this, msgErro, Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(FormsActivity.this, "Falha na rede: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                btnEnviar.setEnabled(true);
+                btnEnviar.setText("Enviar");
+
+                Log.e(TAG, "Falha na requisição", t);
+
+                String msgAmigavel = "Falha na conexão.";
+
+                if (t instanceof IOException) {
+                    msgAmigavel += "Verifique sua internet ou se o servidor está online.";
+                } else {
+                    msgAmigavel += "Erro inesperado: " + t.getLocalizedMessage();
+                }
+
+                Toast.makeText(FormsActivity.this, msgAmigavel, Toast.LENGTH_LONG).show();
             }
         });
     }

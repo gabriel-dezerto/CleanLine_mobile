@@ -1,5 +1,7 @@
 package com.example.cleanline;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,7 +17,9 @@ import android.view.ViewGroup;
 import com.example.cleanline.model.Rotas;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class RotasFragment extends Fragment {
 
@@ -32,19 +36,35 @@ public class RotasFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         recyclerRotas = view.findViewById(R.id.recyclerRotas);
+        recyclerRotas.setLayoutManager(new LinearLayoutManager(requireContext()));
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        atualizarRotas();
+    }
+
+    private void atualizarRotas(){
+        SharedPreferences pref = requireActivity().getSharedPreferences("CLEAN_LINE", Context.MODE_PRIVATE);
+        Set<String> concluidos = pref.getStringSet("setores_concluidos", new HashSet<>());
+
+        List<Rotas> baseRotas = new ArrayList<>();
+
+        baseRotas.add(new Rotas("Venda", "1666738673", 1));
+        baseRotas.add(new Rotas("TI", "1675784673", 2));
+        baseRotas.add(new Rotas("RH", "1395870976", 3));
+        baseRotas.add(new Rotas("Financeiro", "1661122769", 4));
+        baseRotas.add(new Rotas("Administrativo", "1662030545", 5));
 
         listaRotas = new ArrayList<>();
-
-        listaRotas.add(new Rotas("Venda", "1666738673", 1));
-        listaRotas.add(new Rotas("TI", "1675784673", 2));
-        listaRotas.add(new Rotas("RH", "1395870976", 3));
-        listaRotas.add(new Rotas("Financeiro", "1661122769", 4));
-        listaRotas.add(new Rotas("Administrativo", "1662030545", 5));
+        for (Rotas rota : baseRotas){
+            if (!concluidos.contains(String.valueOf(rota.getIdSetor()))){
+                listaRotas.add(rota);
+            }
+        }
 
         rotasAdapter = new RotasAdapter(listaRotas);
-
-        recyclerRotas.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerRotas.setAdapter(rotasAdapter);
-
     }
 }
