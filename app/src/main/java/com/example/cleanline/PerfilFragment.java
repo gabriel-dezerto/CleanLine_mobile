@@ -1,6 +1,7 @@
 package com.example.cleanline;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -11,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +27,7 @@ import retrofit2.Response;
 public class PerfilFragment extends Fragment {
 
     private TextView tvNome, tvEmail, tvTelefone, tvCPF, tvCidade, tvEstado, tvBairro, tvLogradouro, tvNumero;
+    private Button btnLogout;
 
     public PerfilFragment() {
         super(R.layout.fragment_perfil);
@@ -43,6 +46,7 @@ public class PerfilFragment extends Fragment {
         tvBairro = view.findViewById(R.id.tvPerfilBairro);
         tvLogradouro = view.findViewById(R.id.tvPerfilLogradouro);
         tvNumero = view.findViewById(R.id.tvPerfilNumero);
+        btnLogout = view.findViewById(R.id.btnLogout);
 
         SharedPreferences pref = requireActivity().getSharedPreferences("CLEAN_LINE", Context.MODE_PRIVATE);
         int idSuper = pref.getInt("supervisor_id", -1);
@@ -52,6 +56,17 @@ public class PerfilFragment extends Fragment {
         } else {
             Toast.makeText(getContext(), "Supervisor não identificado localmente.", Toast.LENGTH_SHORT).show();
         }
+
+        btnLogout.setOnClickListener(v -> {
+            pref.edit().clear().apply();
+
+            Intent intent = new Intent(requireActivity(), MainActivity.class);
+
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+            startActivity(intent);
+            requireActivity().finish();
+        });
     }
 
     private void carregarDadosDoServidor(int id){

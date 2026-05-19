@@ -262,6 +262,17 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:text="Sair da Conta"
+                android:textColor="@color/white"
+                android:backgroundTint="#D32F2F"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_bold" />
+
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
