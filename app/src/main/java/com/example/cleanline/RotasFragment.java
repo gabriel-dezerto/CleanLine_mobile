@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.cleanline.model.Rotas;
 
@@ -64,7 +65,15 @@ public class RotasFragment extends Fragment {
             }
         }
 
-        rotasAdapter = new RotasAdapter(listaRotas);
-        recyclerRotas.setAdapter(rotasAdapter);
+        if (listaRotas.isEmpty()){
+            pref.edit().remove("setores_concluidos").apply();
+
+            Toast.makeText(getContext(), "Todas as vistorias concluídas! Ciclo reiniciado.", Toast.LENGTH_LONG).show();
+
+            atualizarRotas();
+        } else {
+            rotasAdapter = new RotasAdapter(listaRotas);
+            recyclerRotas.setAdapter(rotasAdapter);
+        }
     }
 }
